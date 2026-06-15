@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Siddhartha Upadhyay — Senior QA / SDET</title>
+  <meta name="description" content="Siddhartha Upadhyay — Senior QA Engineer & SDET. 8+ years in test automation, API & performance testing, CI/CD and AI-paired QA across Finance and enterprise applications." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- scroll progress bar -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- animated background canvas -->
+  <canvas id="bgCanvas" aria-hidden="true"></canvas>
+
+  <!-- custom cursor glow -->
+  <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+
+  <!-- NAV -->
+  <header class="nav" id="nav">
+    <a href="#hero" class="nav__brand">SU<span>.</span></a>
+    <nav class="nav__links" id="navLinks">
+      <a href="#about" data-link>About</a>
+      <a href="#skills" data-link>Skills</a>
+      <a href="#experience" data-link>Experience</a>
+      <a href="#projects" data-link>Projects</a>
+      <a href="#contact" data-link>Contact</a>
+    </nav>
+    <button class="nav__toggle" id="navToggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero" id="hero">
+      <div class="hero__inner">
+        <p class="hero__eyebrow reveal" data-reveal>Hi, I'm</p>
+        <h1 class="hero__name reveal" data-reveal>Siddhartha&nbsp;Upadhyay</h1>
+        <h2 class="hero__role">
+          <span class="hero__static">I'm a</span>
+          <span class="hero__rotator" id="roleRotator"><span>Senior QA Engineer</span></span>
+        </h2>
+        <p class="hero__tagline reveal" data-reveal>
+          8+ years turning fragile releases into dependable ones — test automation, API &amp; performance
+          testing, CI/CD pipelines and AI-paired QA across <strong>Finance</strong> and enterprise apps.
+        </p>
+        <div class="hero__cta reveal" data-reveal>
+          <a href="#projects" class="btn btn--primary">View my work</a>
+          <a href="#contact" class="btn btn--ghost">Get in touch</a>
+        </div>
+        <div class="hero__scroll" aria-hidden="true">
+          <span class="hero__mouse"><span></span></span>
+          <span>Scroll</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- STATS -->
+    <section class="stats">
+      <div class="stats__grid">
+        <div class="stat reveal" data-reveal>
+          <div class="stat__num" data-count="8" data-suffix="+">0</div>
+          <div class="stat__label">Years in QA</div>
+        </div>
+        <div class="stat reveal" data-reveal>
+          <div class="stat__num" data-count="15" data-suffix="+">0</div>
+          <div class="stat__label">Critical features owned</div>
+        </div>
+        <div class="stat reveal" data-reveal>
+          <div class="stat__num" data-count="1500" data-suffix="+">0</div>
+          <div class="stat__label">Manual test cases authored</div>
+        </div>
+        <div class="stat reveal" data-reveal>
+          <div class="stat__num" data-count="40" data-suffix="%">0</div>
+          <div class="stat__label">Faster execution delivered</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section" id="about">
+      <div class="section__head reveal" data-reveal>
+        <span class="section__tag">01 — About</span>
+        <h2 class="section__title">Quality is a habit, not an act.</h2>
+      </div>
+      <div class="about">
+        <div class="about__text reveal" data-reveal>
+          <p>
+            I'm a Senior QA Engineer / SDET with <strong>8+ years</strong> across Infosys, Accenture and
+            Cognizant, currently owning end-to-end testing for critical <strong>Finance-domain</strong>
+            features — from test planning through release.
+          </p>
+          <p>
+            My core is building and hardening <strong>automation frameworks</strong> (UI, API and
+            performance), wiring them into <strong>CI/CD</strong>, and increasingly pairing with
+            <strong>AI tooling</strong> to design tests, generate data and refactor faster. I care about
+            signal over vanity: tests that catch real defects, pipelines that fail loudly, and reports
+            people actually read.
+          </p>
+        </div>
+        <ul class="about__highlights">
+          <li class="reveal" data-reveal><span>🏦</span> Finance &amp; enterprise domain depth</li>
+          <li class="reveal" data-reveal><span>⚙️</span> Framework design — Selenium, Playwright, TestNG, Cucumber</li>
+          <li class="reveal" data-reveal><span>🔌</span> API &amp; performance — Postman, Newman, Bruno, JMeter</li>
+          <li class="reveal" data-reveal><span>🤖</span> AI-paired testing — Copilot &amp; GenAI for test design</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="section" id="skills">
+      <div class="section__head reveal" data-reveal>
+        <span class="section__tag">02 — Skills</span>
+        <h2 class="section__title">The toolkit</h2>
+      </div>
+      <div class="skills">
+        <article class="skill-card reveal" data-reveal>
+          <h3>Test Automation</h3>
+          <div class="bar" data-level="90"><span></span></div>
+          <div class="chips">
+            <span>Selenium WebDriver</span><span>Playwright</span><span>TestNG</span>
+            <span>Cucumber BDD</span><span>Page Object Model</span><span>Java</span>
+          </div>
+        </article>
+        <article class="skill-card reveal" data-reveal>
+          <h3>API &amp; Performance</h3>
+          <div class="bar" data-level="85"><span></span></div>
+          <div class="chips">
+            <span>Postman</span><span>Newman</span><span>Bruno</span>
+            <span>JMeter</span><span>Load Testing</span><span>Allure Reports</span>
+          </div>
+        </article>
+        <article class="skill-card reveal" data-reveal>
+          <h3>DevOps &amp; CI/CD</h3>
+          <div class="bar" data-level="80"><span></span></div>
+          <div class="chips">
+            <span>GitHub Actions</span><span>Jenkins</span><span>Git</span>
+            <span>Maven</span><span>Docker</span><span>Continuous Integration</span>
+          </div>
+        </article>
+        <article class="skill-card reveal" data-reveal>
+          <h3>AI-Paired QA</h3>
+          <div class="bar" data-level="78"><span></span></div>
+          <div class="chips">
+            <span>GitHub Copilot</span><span>GenAI test generation</span>
+            <span>AI-assisted test design</span><span>Test data synthesis</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section class="section" id="experience">
+      <div class="section__head reveal" data-reveal>
+        <span class="section__tag">03 — Experience</span>
+        <h2 class="section__title">Where I've delivered</h2>
+      </div>
+      <div class="timeline" id="timeline">
+        <article class="tl reveal" data-reveal>
+          <div class="tl__dot"></div>
+          <div class="tl__card">
+            <div class="tl__meta"><span class="tl__role">Senior Associate — QA</span><span class="tl__when">Aug 2023 — Present</span></div>
+            <div class="tl__org">Cognizant · Hyderabad</div>
+            <ul>
+              <li>Own end-to-end testing for 15+ critical Finance-domain features, from planning to release.</li>
+              <li>Execute API testing across Postman, Newman and Bruno with full coverage.</li>
+              <li>Use GitHub Copilot &amp; GenAI for AI-assisted automation, test-strategy and case generation.</li>
+              <li>Lead JMeter performance testing integrated into the Jenkins CI/CD pipeline.</li>
+            </ul>
+          </div>
+        </article>
+        <article class="tl reveal" data-reveal>
+          <div class="tl__dot"></div>
+          <div class="tl__card">
+            <div class="tl__meta"><span class="tl__role">Quality Test Analyst</span><span class="tl__when">Jul 2021 — Jun 2023</span></div>
+            <div class="tl__org">Accenture · Gurugram</div>
+            <ul>
+              <li>Cut test-execution time 40% via Selenium framework optimisation and refactoring.</li>
+              <li>Built and maintained automated suites on a Page Object Model architecture.</li>
+              <li>Ran API &amp; performance testing for 15+ features with stakeholder-approved enhancements.</li>
+            </ul>
+          </div>
+        </article>
+        <article class="tl reveal" data-reveal>
+          <div class="tl__dot"></div>
+          <div class="tl__card">
+            <div class="tl__meta"><span class="tl__role">Test Engineer</span><span class="tl__when">Jan 2018 — Jul 2021</span></div>
+            <div class="tl__org">Infosys · Hyderabad</div>
+            <ul>
+              <li>Built automation with Java, TestNG, Page Object Model and Cucumber BDD.</li>
+              <li>Ran suites through Jenkins CI/CD and authored 1,500+ manual test cases.</li>
+              <li>Delivered a mobile app for a PSU client 2 months early at a steady 7+ story points/sprint.</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="section" id="projects">
+      <div class="section__head reveal" data-reveal>
+        <span class="section__tag">04 — Projects</span>
+        <h2 class="section__title">Frameworks I've built &amp; ship green</h2>
+      </div>
+      <div class="projects">
+        <a class="proj reveal" data-reveal data-tilt href="https://github.com/Sidpng/QApilot" target="_blank" rel="noopener">
+          <div class="proj__top"><span class="proj__badge">Flagship</span><span class="proj__arrow">↗</span></div>
+          <h3>QApilot</h3>
+          <p>AI-paired Playwright + Java framework for SauceDemo. Cross-browser CI matrix (Chromium/Firefox/WebKit) and a self-running test-stability dashboard.</p>
+          <div class="proj__tags"><span>Playwright</span><span>Java</span><span>TestNG</span><span>GitHub Actions</span></div>
+        </a>
+        <a class="proj reveal" data-reveal data-tilt href="https://github.com/Sidpng/SauceLabsHybrid" target="_blank" rel="noopener">
+          <div class="proj__top"><span class="proj__badge">UI</span><span class="proj__arrow">↗</span></div>
+          <h3>SauceLabsHybrid</h3>
+          <p>Hybrid Selenium 4 + TestNG framework with per-user regression coverage, config-driven locators and screenshot-on-failure evidence. CI-verified.</p>
+          <div class="proj__tags"><span>Selenium</span><span>TestNG</span><span>POM</span><span>Maven</span></div>
+        </a>
+        <a class="proj reveal" data-reveal data-tilt href="https://github.com/Sidpng/CucumberHybridFramework" target="_blank" rel="noopener">
+          <div class="proj__top"><span class="proj__badge">BDD</span><span class="proj__arrow">↗</span></div>
+          <h3>CucumberHybridFramework</h3>
+          <p>Cucumber 7 + Selenium 4 + TestNG BDD framework with a thread-safe driver factory and Gherkin scenarios, running headlessly in CI.</p>
+          <div class="proj__tags"><span>Cucumber</span><span>BDD</span><span>Selenium</span><span>TestNG</span></div>
+        </a>
+        <a class="proj reveal" data-reveal data-tilt href="https://github.com/Sidpng/myBank" target="_blank" rel="noopener">
+          <div class="proj__top"><span class="proj__badge">E2E</span><span class="proj__arrow">↗</span></div>
+          <h3>myBank</h3>
+          <p>ParaBank UI automation in Selenium 4 + TestNG with Page Object Model, external config and Allure reporting. Repeatable registration flow, CI-verified.</p>
+          <div class="proj__tags"><span>Selenium</span><span>TestNG</span><span>Allure</span><span>ParaBank</span></div>
+        </a>
+      </div>
+      <p class="projects__more reveal" data-reveal>
+        More on <a href="https://github.com/Sidpng" target="_blank" rel="noopener">github.com/Sidpng</a>
+      </p>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section section--contact" id="contact">
+      <div class="section__head reveal" data-reveal>
+        <span class="section__tag">05 — Contact</span>
+        <h2 class="section__title">Let's talk quality</h2>
+      </div>
+      <div class="contact reveal" data-reveal>
+        <p class="contact__lead">Open to senior QA / SDET opportunities. The quickest ways to reach me:</p>
+        <div class="contact__grid">
+          <!-- PLACEHOLDER: email -->
+          <a class="contact__card" href="#" data-placeholder="email">
+            <span class="contact__icon">✉️</span>
+            <span class="contact__k">Email</span>
+            <span class="contact__v">add your email</span>
+          </a>
+          <!-- PLACEHOLDER: phone -->
+          <a class="contact__card" href="#" data-placeholder="phone">
+            <span class="contact__icon">📱</span>
+            <span class="contact__k">Phone</span>
+            <span class="contact__v">add your number</span>
+          </a>
+          <!-- PLACEHOLDER: linkedin -->
+          <a class="contact__card" href="#" data-placeholder="linkedin">
+            <span class="contact__icon">💼</span>
+            <span class="contact__k">LinkedIn</span>
+            <span class="contact__v">add your profile</span>
+          </a>
+          <!-- GitHub is public -->
+          <a class="contact__card" href="https://github.com/Sidpng" target="_blank" rel="noopener">
+            <span class="contact__icon">🐙</span>
+            <span class="contact__k">GitHub</span>
+            <span class="contact__v">github.com/Sidpng</span>
+          </a>
+          <!-- PLACEHOLDER: location -->
+          <span class="contact__card" data-placeholder="location">
+            <span class="contact__icon">📍</span>
+            <span class="contact__k">Location</span>
+            <span class="contact__v">add your city</span>
+          </span>
+          <!-- PLACEHOLDER: resume -->
+          <a class="contact__card" href="#" data-placeholder="resume">
+            <span class="contact__icon">📄</span>
+            <span class="contact__k">Résumé</span>
+            <span class="contact__v">add résumé link</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> Siddhartha Upadhyay · Built as a static site, deployed on GitHub Pages.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
