@@ -15,9 +15,6 @@
     const scrolled = h.scrollTop / (h.scrollHeight - h.clientHeight);
     progress.style.width = (scrolled * 100).toFixed(2) + "%";
     nav.classList.toggle("is-scrolled", h.scrollTop > 40);
-    // fade the 3D scene out past the hero so section text stays readable
-    const bg = document.getElementById("bgCanvas");
-    if (bg) bg.style.opacity = Math.max(0.1, 1 - h.scrollTop / (h.clientHeight * 0.85)).toFixed(3);
   };
   document.addEventListener("scroll", onScroll, { passive: true });
   onScroll();
@@ -157,5 +154,50 @@
     });
   }
 
-  /* ---------- 3D holographic background is handled by scene.js (module) ---------- */
+  /* ---------- particle background ---------- */
+  const canvas = $("#bgCanvas");
+  if (canvas && !reduce) {
+    const ctx = canvas.getContext("2d");
+    let w, h, dots, raf;
+    const COUNT = () => Math.min(80, Math.floor(window.innerWidth / 18));
+    const resize = () => {
+      w = canvas.width = window.innerWidth;
+      h = canvas.height = window.innerHeight;
+      dots = Array.from({ length: COUNT() }, () => ({
+        x: Math.random() * w, y: Math.random() * h,
+        vx: (Math.random() - 0.5) * 0.35, vy: (Math.random() - 0.5) * 0.35,
+        r: Math.random() * 1.6 + 0.5
+      }));
+    };
+    const draw = () => {
+      ctx.clearRect(0, 0, w, h);
+      for (let i = 0; i < dots.length; i++) {
+        const d = dots[i];
+        d.x += d.vx; d.y += d.vy;
+        if (d.x < 0 || d.x > w) d.vx *= -1;
+        if (d.y < 0 || d.y > h) d.vy *= -1;
+        ctx.beginPath();
+        ctx.arc(d.x, d.y, d.r, 0, Math.PI * 2);
+        ctx.fillStyle = "rgba(45,212,191,0.55)";
+        ctx.fill();
+        for (let j = i + 1; j < dots.length; j++) {
+          const e = dots[j], dx = d.x - e.x, dy = d.y - e.y;
+          const dist = Math.hypot(dx, dy);
+          if (dist < 130) {
+            ctx.beginPath();
+            ctx.moveTo(d.x, d.y); ctx.lineTo(e.x, e.y);
+            ctx.strokeStyle = `rgba(124,140,255,${0.14 * (1 - dist / 130)})`;
+            ctx.lineWidth = 1; ctx.stroke();
+          }
+        }
+      }
+      raf = requestAnimationFrame(draw);
+    };
+    resize(); draw();
+    window.addEventListener("resize", () => { cancelAnimationFrame(raf); resize(); draw(); });
+    document.addEventListener("visibilitychange", () => {
+      if (document.hidden) cancelAnimationFrame(raf);
+      else draw();
+    });
+  }
 })();
