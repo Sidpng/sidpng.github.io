@@ -7,17 +7,18 @@
   <meta name="description" content="Siddhartha Upadhyay — Senior QA Engineer & SDET. 8+ years in test automation, API & performance testing, CI/CD and AI-paired QA across Finance and enterprise applications." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <!-- grain + vignette overlays -->
+  <div class="grain" aria-hidden="true"></div>
+  <div class="vignette" aria-hidden="true"></div>
+
   <!-- scroll progress bar -->
   <div class="scroll-progress" id="scrollProgress"></div>
 
-  <!-- animated background canvas -->
-  <canvas id="bgCanvas" aria-hidden="true"></canvas>
-
-  <!-- custom cursor glow -->
+  <!-- custom cursor light -->
   <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
 
   <!-- NAV -->
@@ -37,24 +38,28 @@
     <!-- HERO -->
     <section class="hero" id="hero">
       <div class="hero__inner">
-        <p class="hero__eyebrow reveal" data-reveal>Hi, I'm</p>
-        <h1 class="hero__name reveal" data-reveal>Siddhartha Upadhyay</h1>
-        <h2 class="hero__role">
-          <span class="hero__static">I'm a</span>
+        <p class="hero__eyebrow reveal" data-reveal><span class="hero__eyebrow-line"></span>Portfolio — Senior QA / SDET</p>
+        <h1 class="hero__name reveal" data-reveal>
+          <span class="hero__word">Siddhartha</span>
+          <span class="hero__word">Upadhyay</span>
+        </h1>
+        <div class="hero__rule reveal" data-reveal></div>
+        <h2 class="hero__role reveal" data-reveal>
+          <span class="hero__static">Currently</span>
           <span class="hero__rotator" id="roleRotator"><span>Senior QA Engineer</span></span>
         </h2>
         <p class="hero__tagline reveal" data-reveal>
           8+ years turning fragile releases into dependable ones — test automation, API &amp; performance
-          testing, CI/CD pipelines and AI-paired QA across <strong>Finance</strong> and enterprise apps.
+          testing, CI/CD pipelines and AI-paired QA across <strong>Finance</strong> and enterprise applications.
         </p>
         <div class="hero__cta reveal" data-reveal>
-          <a href="#projects" class="btn btn--primary">View my work</a>
-          <a href="#contact" class="btn btn--ghost">Get in touch</a>
+          <a href="#projects" class="btn btn--primary" data-magnetic>View my work</a>
+          <a href="#contact" class="btn btn--ghost" data-magnetic>Get in touch</a>
         </div>
-        <div class="hero__scroll" aria-hidden="true">
-          <span class="hero__mouse"><span></span></span>
-          <span>Scroll</span>
-        </div>
+      </div>
+      <div class="hero__scroll" aria-hidden="true">
+        <span class="hero__scroll-line"></span>
+        <span>Scroll</span>
       </div>
     </section>
 
@@ -89,23 +94,24 @@
       <div class="about">
         <div class="about__text reveal" data-reveal>
           <p>
-            I'm a Senior QA Engineer / SDET with <strong>8+ years</strong> across Infosys, Accenture and
-            Cognizant, currently owning end-to-end testing for critical <strong>Finance-domain</strong>
-            features — from test planning through release.
+            Across <strong>eight years</strong> and three firms — Infosys, Accenture, now Cognizant — I've
+            moved from writing test cases to owning quality end-to-end: shaping the strategy, building the
+            automation, and standing behind what ships. Today that's the critical <strong>Finance-domain</strong>
+            features at Cognizant, from the first test plan to the release gate.
           </p>
           <p>
-            My core is building and hardening <strong>automation frameworks</strong> (UI, API and
-            performance), wiring them into <strong>CI/CD</strong>, and increasingly pairing with
-            <strong>AI tooling</strong> to design tests, generate data and refactor faster. I care about
-            signal over vanity: tests that catch real defects, pipelines that fail loudly, and reports
-            people actually read.
+            My craft is building and hardening <strong>automation frameworks</strong> — UI, API and
+            performance — then wiring them into <strong>CI/CD</strong> so failures surface early and loudly.
+            Increasingly I pair with <strong>AI tooling</strong> to design tests, synthesise data and refactor
+            faster. Throughout, I optimise for signal over vanity: tests that catch real defects, pipelines
+            you can trust, and reports people actually read.
           </p>
         </div>
         <ul class="about__highlights">
-          <li class="reveal" data-reveal><span>🏦</span> Finance &amp; enterprise domain depth</li>
-          <li class="reveal" data-reveal><span>⚙️</span> Framework design — Selenium, Playwright, TestNG, Cucumber</li>
-          <li class="reveal" data-reveal><span>🔌</span> API &amp; performance — Postman, Newman, Bruno, JMeter</li>
-          <li class="reveal" data-reveal><span>🤖</span> AI-paired testing — Copilot &amp; GenAI for test design</li>
+          <li class="reveal" data-reveal><span class="about__idx">A</span> Finance &amp; enterprise domain depth</li>
+          <li class="reveal" data-reveal><span class="about__idx">B</span> Framework design — Selenium, Playwright, TestNG, Cucumber</li>
+          <li class="reveal" data-reveal><span class="about__idx">C</span> API &amp; performance — Postman, Newman, Bruno, JMeter</li>
+          <li class="reveal" data-reveal><span class="about__idx">D</span> AI-paired testing — Copilot &amp; GenAI for test design</li>
         </ul>
       </div>
     </section>
@@ -118,7 +124,7 @@
       </div>
       <div class="skills">
         <article class="skill-card reveal" data-reveal>
-          <h3>Test Automation</h3>
+          <div class="skill-card__head"><h3>Test Automation</h3><span class="skill-card__pct" data-pct="90">90</span></div>
           <div class="bar" data-level="90"><span></span></div>
           <div class="chips">
             <span>Selenium WebDriver</span><span>Playwright</span><span>TestNG</span>
@@ -126,7 +132,7 @@
           </div>
         </article>
         <article class="skill-card reveal" data-reveal>
-          <h3>API &amp; Performance</h3>
+          <div class="skill-card__head"><h3>API &amp; Performance</h3><span class="skill-card__pct" data-pct="85">85</span></div>
           <div class="bar" data-level="85"><span></span></div>
           <div class="chips">
             <span>Postman</span><span>Newman</span><span>Bruno</span>
@@ -134,7 +140,7 @@
           </div>
         </article>
         <article class="skill-card reveal" data-reveal>
-          <h3>DevOps &amp; CI/CD</h3>
+          <div class="skill-card__head"><h3>DevOps &amp; CI/CD</h3><span class="skill-card__pct" data-pct="80">80</span></div>
           <div class="bar" data-level="80"><span></span></div>
           <div class="chips">
             <span>GitHub Actions</span><span>Jenkins</span><span>Git</span>
@@ -142,7 +148,7 @@
           </div>
         </article>
         <article class="skill-card reveal" data-reveal>
-          <h3>AI-Paired QA</h3>
+          <div class="skill-card__head"><h3>AI-Paired QA</h3><span class="skill-card__pct" data-pct="78">78</span></div>
           <div class="bar" data-level="78"><span></span></div>
           <div class="chips">
             <span>GitHub Copilot</span><span>GenAI test generation</span>
@@ -246,38 +252,36 @@
         <p class="contact__lead">Open to senior QA / SDET opportunities. The quickest ways to reach me:</p>
         <div class="contact__grid">
           <a class="contact__card" href="mailto:siddhartupadhya@gmail.com">
-            <span class="contact__icon">✉️</span>
             <span class="contact__k">Email</span>
             <span class="contact__v">siddhartupadhya@gmail.com</span>
+            <span class="contact__arrow">↗</span>
           </a>
-          <!-- Phone intentionally not public -->
           <span class="contact__card">
-            <span class="contact__icon">📱</span>
             <span class="contact__k">Phone</span>
             <span class="contact__v">Available on request</span>
           </span>
           <a class="contact__card" href="https://www.linkedin.com/in/siddhartha-upadhyay-206301197/" target="_blank" rel="noopener">
-            <span class="contact__icon">💼</span>
             <span class="contact__k">LinkedIn</span>
             <span class="contact__v">linkedin.com/in/siddhartha-upadhyay</span>
+            <span class="contact__arrow">↗</span>
           </a>
-          <!-- GitHub is public -->
           <a class="contact__card" href="https://github.com/Sidpng" target="_blank" rel="noopener">
-            <span class="contact__icon">🐙</span>
             <span class="contact__k">GitHub</span>
             <span class="contact__v">github.com/Sidpng</span>
+            <span class="contact__arrow">↗</span>
           </a>
           <span class="contact__card">
-            <span class="contact__icon">📍</span>
             <span class="contact__k">Location</span>
             <span class="contact__v">Hyderabad, India</span>
           </span>
-          <!-- PLACEHOLDER: resume -->
-          <a class="contact__card" href="#" data-placeholder="resume">
-            <span class="contact__icon">📄</span>
+          <!-- PLACEHOLDER: résumé — hidden until a public link/PDF is added.
+               To restore: uncomment and set href to your résumé URL (e.g. resume.pdf).
+          <a class="contact__card" href="resume.pdf" target="_blank" rel="noopener">
             <span class="contact__k">Résumé</span>
-            <span class="contact__v">add résumé link</span>
+            <span class="contact__v">Download PDF</span>
+            <span class="contact__arrow">↗</span>
           </a>
+          -->
         </div>
       </div>
     </section>
