@@ -274,7 +274,6 @@ a.contact__card:hover { border-color: var(--border-2); transform: translateY(-4p
 .contact__v { font-size: 0.95rem; color: var(--text); word-break: break-word; }
 .contact__arrow { position: absolute; top: 1.1rem; right: 1.2rem; color: var(--muted); transition: transform 0.3s var(--ease), color 0.3s; }
 a.contact__card:hover .contact__arrow { transform: translate(3px, -3px); color: var(--text); }
-.contact__card[data-placeholder] { opacity: 0.6; }
 
 /* ============ Footer ============ */
 .footer { position: relative; z-index: 3; text-align: center; padding: 3rem 1.5rem; border-top: 1px solid var(--border); color: var(--faint); font-size: 0.85rem; }
